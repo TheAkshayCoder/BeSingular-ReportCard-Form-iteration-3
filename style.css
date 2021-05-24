@@ -56,6 +56,7 @@ ul{
     justify-content: space-between;
     position: relative;
     left: 0;
+    margin-bottom: 2rem;
 }
 
 .active-button li{
@@ -127,6 +128,9 @@ li span:nth-child(2){
     width: 100%;
 }
 
+.form-group{
+    margin: 1rem;
+}
 
 #submit,#previous,#next{
     display: none;
