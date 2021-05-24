@@ -122,7 +122,8 @@ const next=document.getElementById('next')
 const previous=document.getElementById('previous')
 const submit=document.getElementById('submit')
 const list=document.getElementsByTagName('li')
-console.log(list.length)
+let progress=document.getElementById('progress')
+// console.log(progress.style)
 
 if(count=0){
     previous.classList.remove('active')
@@ -137,6 +138,17 @@ next.addEventListener('click',function(){
     console.log(count)
     form_box[count-1].classList.remove('active')
     form_box[count].classList.add('active')
+    console.log(progress)
+   if(count==1){
+    progress.style.width='20%'
+   }else if(count==2){
+    progress.style.width='38%'
+   }else if(count==3){
+    progress.style.width='57%'
+   }else if(count==4){
+    progress.style.width='68%'
+   }
+
 
     // console.log(previous)
     if (count>0){
@@ -165,5 +177,18 @@ previous.addEventListener('click',function(){
     
     if (count==0){
         previous.classList.remove('active')
+        progress.style.width='0%'
     }
+
+    if(count==1){
+      progress.style.width='20%'
+     }else if(count==2){
+      progress.style.width='38%'
+     }else if(count==3){
+      progress.style.width='57%'
+     }else if(count==4){
+      progress.style.width='68%'
+     }
+
+
 })

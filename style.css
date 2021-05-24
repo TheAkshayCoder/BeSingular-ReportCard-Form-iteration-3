@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -23,9 +27,28 @@ body{
     margin-top: 1rem;
 }
 
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background: -webkit-linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
+  -webkit-background-clip: text;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 .container{
     background-color: #fff;
     width: 70%;
+}
+
+ul{
+    padding: 0 2rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 
 .active-button{
@@ -40,30 +63,29 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
     z-index: 0;
 }
 
-i{
-    color: violet;
-    font-size: 5rem;
+li span:nth-child(2){
+    text-align: center;
 }
+
 
 .active{
     width: 190px;
 }
 
 
-.active-button::before{
-    content: '';
-    height: 4px;
-    width:87%;
-    background-color:grey;
+#progress{
+    height: 0.6rem;
+    width:0%;
+    background: rgb(62,28,79);
+    background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 37%;
+    left: 16%;
     transform: translateY(-50%);
-    transition: 0.4s ease;
+    transition: width 1s ease;
 }
 
 
@@ -74,9 +96,13 @@ i{
 
 .active-button li .round-btn{
     background-color: rgb(185, 180, 180);
-    width: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
-    text-align: center;
+    transition: 1s ease;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -85,6 +111,7 @@ i{
 .active-button li.active .round-btn{
     background: rgb(62,28,79);
     background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
+    transition: 1s ease;
     color: white;
 }
 
@@ -142,4 +169,5 @@ i{
 
 .form-content-box{
     width: 80%;
+    font-family: 'Montserrat', sans-serif;
 }
