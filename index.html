@@ -47,32 +47,31 @@
                             </li>
                         </ul>
                         <div class="form-box active">
-                            <!-- pagination -->
-                            
-                            
-                            <!-- pagination -->
-
                             <!-- form -->
-                            <form id="form" class="form-content-box">
+                            <form id="my-form" class="form-content-box" action="submit">
                                 <div class="form-group">
                                     <label for="">Full Name</label>
-                                    <input type="text" name="" id="full-name" class="form-control" required>
+                                    <input type="text" name="fullName" id="full-name" class="form-control" required>
+                                    <div id="full-name-error" class="error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Registered Email Id</label>
-                                    <input type="emial" name="" id="Registered-email-id" class="form-control">
+                                    <input type="email" name="email" id="Registered-email-id" class="form-control" required>
+                                    <div id="email-error" class="error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Gender</label>
-                                    <select name="gender" id="gender" class="form-control">
+                                    <select name="gender" id="gender" class="form-control" required>
                                         <option value="Gender">--Select Gender--</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
+                                    <div id="gender-error" class="error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Age</label>
-                                    <input type="number" name="" id="age" class="form-control">
+                                    <input type="number" name="age" id="age" class="form-control" required>
+                                    <div class="error" id="age-error"></div>
                                 </div>
                             </form>
                             <!-- form -->
@@ -83,45 +82,55 @@
                         <!-- start -->
                         <div class="form-box">
                             <!-- form -->
-                            <form action="" class="form-content-box">
+                            <form action="submit" id="my-form-2" class="form-content-box">
                                 <div class="form-group">
                                     <label for="">Course Name</label>
-                                    <input type="text" name="" id="course-name" class="form-control">
+                                    <input type="text" name="courseName" id="course-name" class="form-control" required>
+                                    <div id="course-name-error" class="error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Course Information</label>
-                                    <input type="text" name="" id="course-information" class="form-control">
+                                    <input type="text" name="courseinformation" id="course-information" class="form-control" required>
+                                    <div class="error" id="course-information-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Age Grade Of the Course</label>
-                                    <select class="form-control" name="" id="age-grade">
-                                        <option value="">6-10years</option>
-                                        <option value="">11-15years</option>
-                                        <option value="">15+years</option>
+                                    <select class="form-control" name="ageGrade" id="age-grade" required>
+                                        <option value="none">--Select Age Grade--</option>
+                                        <option value="6-10years">6-10years</option>
+                                        <option value="11-15years">11-15years</option>
+                                        <option value="15+years">15+years</option>
                                     </select>
+                                    <div class="error" id="age-grade-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Number of Sessions</label>
-                                    <input type="number" name="" id="no.-of-sessions" class="form-control">
+                                    <input type="number" name="numberOfSession" id="no.-of-sessions" class="form-control" required>
+                                    <div class="error" id="no-of-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Session Frequency</label>
-                                    <select name="" id="session-frequency" class="form-control">
-                                        <option value="">Once A week</option>
-                                        <option value="">Twice A week</option>
+                                    <select name="sessionFrequency" id="session-frequency" class="form-control" required>
+                                        <option value="none">--Select Session Frequency--</option>
+                                        <option value="Once a week">Once A week</option>
+                                        <option value="Twice a week">Twice A week</option>
                                     </select>
+                                    <div class="error" id="session-frequency-error"></div>
                                 </div>
-                                <div class="form-group">
+                                 <div class="form-group">
                                     <label for="">Duration per Session</label>
-                                    <input type="number" name="" id="duration-per-session" class="form-control">Minutes
+                                    <input type="number" name="durationPerSession" id="duration-per-session" class="form-control" required>Minutes
+                                    <div class="error" id="duration_per_session_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Country</label>
-                                    <input type="text" name="" id="country" class="form-control">
+                                    <input type="text" name="country" id="country" class="form-control" required>
+                                    <div class="error" id="country-error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Timezone</label>
-                                    <input type="text" name="" id="timezone" class="form-control">
+                                    <input type="text" name="timezone" id="timezone" class="form-control" required>
+                                    <div class="error" id="timezone-error"></div>
                                 </div>
                                 
                             </form>
@@ -134,83 +143,110 @@
                         
 
                             <!-- form -->
-                            <form action="" class="form-content-box">
+                            <form action="submit" class="form-content-box" id="form-3">
                                 <div class="form-group">
                                     <label for="">Date Of Report</label>
-                                    <input type="date" name="" id="date_of_report" class="form-control">
+                                    <input type="date" name="dor" id="date_of_report" class="form-control">
+                                    <div id="date_of_report_error" class="error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">No. of Sessions completed</label>
-                                    <input type="number" name="" id="No._of_sessions_completed" class="form-control">
+                                    <input type="number" name="numberOfSessionCompleted" id="No._of_sessions_completed" class="form-control" required>
+                                    <div class="error" id="No_of_sessions_completed_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">No. of missed sessions</label>
-                                    <input type="number" name="" id="missed_sessions" class="form-control">
+                                    <input type="number" name="numberOfMissedSession" id="missed_sessions" class="form-control" required>
+                                    <div class="error" id="missed_sessions_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Number of sessions rescheduled</label>
-                                    <input type="number" name="" id="sessions_rescheduled" class="form-control">
+                                    <input type="number" name="numberOfSessionRescheduled" id="sessions_rescheduled" class="form-control" required>
+                                    <div class="error" id="sessions_rescheduled_error"></div>
                                 </div>
-                                <div class="form-group" id="attendence">
-                                      <div class="attendence_1">
-                                        <p>
-                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"><label for="">Attendence</label></button>
-                                          </p>
-                                          <div class="row">
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                                <div class="card card-body">
-                                                    <input type="date" placeholder="date" id='attendence_date_1' class="form-control">
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                                <div class="card card-body">
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Present</option>
-                                                        <option value="">Absent</option>
-                                                    </select>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                      </div>
-                                      <div class="attendence_1">
-                                        <p>
-                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"><label for="">Attendence</label></button>
-                                          </p>
-                                          <div class="row">
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                                <div class="card card-body">
-                                                    <input type="date" placeholder="date" id='attendence_date_2' class="form-control">
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                                <div class="card card-body">
-                                                    <select name="" id="attendence-2" class="form-control">
-                                                        <option value="">Present</option>
-                                                        <option value="">Absent</option>
-                                                    </select>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                      </div>
-                                </div>
-                                <button type="button" class="btn btn-success" id="add_attendence">Add</button>
-                                      <button type="button" class="btn btn-danger" id="remove_attendence">Remove</button>
                                 <div class="form-group">
                                     <label for="">Topics Covered</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="topicsCovered" id="topics_covered" class="form-control" required>
+                                    <div class="error" id="topics_covered_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Learning Outcomes</label>
-                                    <input type="text" name="" id="learning-outcomes" class="form-control">
+                                    <input type="text" name="learningOutcomes" id="learning_outcomes" class="form-control" required>
+                                    <div class="error" id="learning_outcomes_error"></div>
                                 </div>
+                                    <div class="form-group">
+                                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                                            <div class="accordion-item" id="1">
+                                              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                                    <label for="">Attendence-1</label>
+                                                </button>
+                                              </h2>
+                                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                                <div class="accordion-body">
+                                                    <form action="" id="innerFormAttendece_1">
+                                                        <input type="date" placeholder="date"  name="attendence[1][date]" id='attendence_date_1' class="form-control">
+                                                    <select name="attendence[1][status]" id="attendence-1" class="form-control">
+                                                        <option value="Status">--Status--</option>
+                                                        <option value="Present">Present</option>
+                                                        <option value="Absent">Absent</option>
+                                                    </select>
+                                                    </form>
+                                                    
+                                                    <div class="error" id="attendence_1_error"></div>
+                                                    <button type="button" class="btn btn-danger" onclick='remove(this)' id="remove_attendence_1">Remove</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item" id="2">
+                                              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                    <label for="">Attendence-2</label>
+                                                </button>
+                                              </h2>
+                                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                                <div class="accordion-body">
+                                                    <form action="" id="innerFormAttendece_2">
+                                                        <input type="date" placeholder="date" id='attendence_date_2' name="attendence[2][date]" class="form-control">
+                                                    <select name="attendence[2][status]" id="attendence-2" class="form-control">
+                                                        <option value="Status">--Status--</option>
+                                                        <option value="Present">Present</option>
+                                                        <option value="Absent">Absent</option>
+                                                    </select>
+                                                    </form>
+                                                    
+                                                    <div class="error" id="attendence_2_error"></div>
+                                                    <button type="button" class="btn btn-danger" onclick='remove(this)' id="remove_attendence_2">Remove</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item" id="3">
+                                              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                    <label for="">Attendence-3</label>
+                                                </button>
+                                              </h2>
+                                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                                <div class="accordion-body">
+                                                    <form action="" id="innerFormAttendece_3">
+                                                        <input type="date" placeholder="date" name='attendence[3][date]' id='attendence_date_3' name="Date" class="form-control">
+                                                        <select name="attendence[3][status]" id="attendence-3" class="form-control">
+                                                            <option value="Status">--Status--</option>
+                                                            <option value="Present">Present</option>
+                                                            <option value="Absent">Absent</option>
+                                                        </select>
+                                                    </form>
+                                                    
+                                                    <div class="error" id="attendence_3_error"></div>
+                                                    <button type="button" class="btn btn-danger" onclick='remove(this)' id="remove_attendence_3">Remove</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success" id="add_attendence">Add</button>
+                                      
+                                
                             </form>
                             <!-- form -->
                         </div>
@@ -220,96 +256,129 @@
                         <div class="form-box">
                             
                             <!-- form -->
-                            <form action="" class="form-content-box">
-                                <div id="all-assesment">
-                                    <div class="assesment-review">
-                                        <p>
-                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"><label for="">Assesment Review</label></button>
-                                          </p>
-                                          <div class="row">
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <form action="submit" class="form-content-box" id="form-4">
+                                
+                                    <div class="accordion all-assesment" id="accordionPanelsStayOpenExample">
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                <label for="">Assesment Review-1</label>
+                                            </button>
+                                          </h2>
+                                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                            <div class="accordion-body">
                                                 <div class="card card-body">
                                                     <div class="form-group">
                                                         <label for="">Type</label>
-                                                        <input type="text" name="" id="" class="form-control">
+                                                        <input type="text" name="type" id="type-1" class="form-control" required>
+                                                        <div class="error" id="type_error"></div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="">Submitted</label>
-                                                        <input type="text" name="" id="" class="form-control">
+                                                        <input type="text" name="submitted" id="submit-1" class="form-control" required>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="">Submission-date</label>
-                                                        <input type="date" name="" id="" class="form-control">
+                                                        <input type="date" name="submissionDate" id="submission-1" class="form-control" required>
+                                                    </div>
+                                                    <div class="card card-body">
+                                                        <div class="form-group">
+                                                            <label for="">Peers avg. grade</label>
+                                                            <input type="number" name="peersAvgGrade" id='peersAvg-1' class="form-control" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Grade</label>
+                                                            <input type="number" name="grade" id="grade-1" class="form-control" required>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                              </div>
-                                            </div>
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                                <div class="card card-body">
-                                                    <div class="form-group">
-                                                        <label for="">Peers avg. grade</label>
-                                                        <input type="number" name="" id="" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">Grade</label>
-                                                        <input type="number" name="" id="" class="form-control">
-                                                    </div>
-                                                </div>
-                                              </div>
                                             </div>
                                           </div>
-                                    </div>
-                                    <div class="assesment-review">
-                                        <p>
-                                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"><label for="">Assesment Review</label></button>
-                                          </p>
-                                          <div class="row">
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                <label for="">Assesment Review-2</label>
+                                            </button>
+                                          </h2>
+                                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                            <div class="accordion-body">
                                                 <div class="card card-body">
                                                     <div class="form-group">
                                                         <label for="">Type</label>
-                                                        <input type="text" name="" id="" class="form-control">
+                                                        <input type="text" name="type" id="type-2" class="form-control" required>
+                                                        <div class="error" id="type_error"></div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="">Submitted</label>
-                                                        <input type="text" name="" id="" class="form-control">
+                                                        <input type="text" name="submitted" id="submit-2" class="form-control" required>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="">Submission-date</label>
-                                                        <input type="date" name="" id="" class="form-control">
+                                                        <input type="date" name="submissionDate" id="submission-2" class="form-control" required>
+                                                    </div>
+                                                    <div class="card card-body">
+                                                        <div class="form-group">
+                                                            <label for="">Peers avg. grade</label>
+                                                            <input type="number" name="peersAvgGrade" id='peersAvg-2' class="form-control" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Grade</label>
+                                                            <input type="number" name="grade" id="grade-2" class="form-control" required>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                              </div>
-                                            </div>
-                                            <div class="col">
-                                              <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                                <div class="card card-body">
-                                                    <div class="form-group">
-                                                        <label for="">Peers avg. grade</label>
-                                                        <input type="number" name="" id="" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">Grade</label>
-                                                        <input type="number" name="" id="" class="form-control">
-                                                    </div>
-                                                </div>
-                                              </div>
                                             </div>
                                           </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                <label for="">Assesment Review-3</label>
+                                            </button>
+                                          </h2>
+                                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                            <div class="accordion-body">
+                                                <div class="card card-body">
+                                                    <div class="form-group">
+                                                        <label for="">Type</label>
+                                                        <input type="text" name="type" id="type-3" class="form-control" required>
+                                                        <div class="error" id="type_error"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">Submitted</label>
+                                                        <input type="text" name="submitted" id="submit-3" class="form-control" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">Submission-date</label>
+                                                        <input type="date" name="submissionDate" id="submission-3" class="form-control" required>
+                                                    </div>
+                                                    <div class="card card-body">
+                                                        <div class="form-group">
+                                                            <label for="">Peers avg. grade</label>
+                                                            <input type="number" name="peersAvgGrade" id='peersAvg-3' class="form-control" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="">Grade</label>
+                                                            <input type="number" name="grade" id="grade-3"  class="form-control" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
                                     </div>
-                                </div>
                                 <button type="button" class="btn btn-success" id="add_assesment_review">Add</button>
                                       <button type="button" class="btn btn-danger" id="remove_assesment_review">Remove</button>
                                 <div class="form-group">
                                     <label for="">Overall Performance Rating(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="overAllPerformanceRating" id="overall_performance_rating" class="form-control" required>
+                                    <div class="error" id="overall_performance_rating_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">UNSDGs knowledge Rating(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="unsdgsRating" id="UNSDGs_knowledge_rating" class="form-control" required>
+                                    <div class="error" id="UNSDGs_knowledge_rating_error"></div>
                                 </div>
                             </form>
                             <!-- form -->
@@ -319,42 +388,51 @@
                         <!-- start -->
                         <div class="form-box">
                             <!-- form -->
-                            <form action="" class="form-content-box">
+                            <form action="submit" class="form-content-box" id="form-5">
                                 <div class="form-group">
                                     <label for="">Radical thinker(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="radicalThinker" id="radical_thinker" class="form-control" required>
+                                    <div class="error" id="radical_thinker_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Innovative thinker(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="innovativeThinker" id="innovative_thinker" class="form-control" required>
+                                    <div class="error" id="innovative_thinker_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Quality Obsession(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="qualityObession" id="quality_obesession" class="form-control" required>
+                                    <div class="error" id="quality_obesession_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Hands On Skill(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="handsOnSkills" id="hands_on_skills" class="form-control" required>
+                                    <div class="error" id="hands_on_skills_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Big dreamer(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="bigdreamer" id="big_dreamer" class="form-control" required>
+                                    <div class="error" id="big_dreamer_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Impactful approach(%)</label>
-                                    <input type="number" name="" id="" class="form-control">
+                                    <input type="number" name="impactFulApproach" id="impactful_approach" class="form-control" required>
+                                    <div class="error" id="impactful_approach_error"></div>
                                 </div>  
                                 <div class="form-group">
                                     <label for="">Strong Points</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="strongPoints" id="strong_points" class="form-control" required>
+                                    <div class="error" id="strong_points_error"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Weak Points</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="weakPoints" id="weak_points" class="form-control" required>
+                                    <div class="error" id="weak_points_error"></div>
                                 </div>        
                                 <div class="form-group">
                                     <label for="">Other Suggestions</label>
-                                    <input type="text" name="" id="" class="form-control">
+                                    <input type="text" name="otherSuggestions" id="other_suggestions" class="form-control" required>
+                                    <div class="error" id="other_suggestions_error"></div>
                                 </div>                       
                             </form>
                             <!-- form -->
@@ -364,10 +442,6 @@
                             <button class="previous btn" id="previous">Previous</button>
                             <button  value="Next" class="next btn btn-info active" id="next">Next</button>
                             <button value="Submit" class="submit btn" id="submit">Submit</button>
-                        </div>
-
-                        <div class="button-row">
-                            
                         </div>
 
 

@@ -78,7 +78,7 @@ li span:nth-child(2){
 
 
 #progress{
-    height: 0.6rem;
+    /* height: 0.6rem; */
     width:0%;
     background: rgb(62,28,79);
     background: linear-gradient(90deg, rgba(62,28,79,1) 29%, rgba(158,60,126,1) 100%);
@@ -128,6 +128,53 @@ li span:nth-child(2){
     width: 100%;
 }
 
+.error,#email-error{
+    display: none;
+}
+
+.error.active,
+#email-error.active,
+#gender-error.active,
+#age-error.active,
+#date_of_report_error.active,
+#type_error.active,
+#radical_thinker_error.active,
+#course-information-error.active,
+#age-grade-error.active,
+#no-of-error.active,
+#session-frequency-error.active,
+#duration-per-session-error.active,
+#country-error.active,
+#timezone-error.active,
+#date_of_report_error.active,
+#No_of_sessions_completed_error.active,
+#missed_sessions_error.active,
+#sessions_rescheduled_error.active,
+#topics_covered_error.active,
+#learning_outcomes_error.active,
+#UNSDGs_knowledge_rating_error.active,
+#radical_thinker_error.active,
+#innovative_thinker_error.active,
+#quality_obesession_error.active,
+#hands_on_skills_error.active,
+#big_dreamer_error.active,
+#impactful_approach_error.active,
+#strong_points_error.active,
+#weak_points_error.active,
+#other_suggestions_error.active,
+#attendence_1_error.active,
+#attendence_2_error.active,
+#attendence_3_error.active,
+.active_attendence
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: red;
+}
+
+
 .form-group{
     margin: 1rem;
 }
@@ -175,3 +222,68 @@ li span:nth-child(2){
     width: 80%;
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (max-width: 755px) {
+    .active-button li .round-btn{
+        background-color: rgb(185, 180, 180);
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        transition: 1s ease;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6rem;
+    }
+
+    .active{
+        width: 80px;
+    }
+
+    .active-button{
+        padding-left: 0rem;
+    }
+
+    li span:nth-child(2){
+        font-size: 0.4rem;
+    }
+
+    #img h1{
+        font-size: 1.2rem;
+    }
+
+    .form-group{
+        font-size: 0.5rem;
+    }
+
+    .form-group label{
+        font-size: 0.5rem;
+
+    }
+
+    .form-group input{
+        font-size: 0.5rem;
+    }
+
+    .form-group select{
+        font-size: 0.5rem;
+    }
+
+    .form-control{
+        font-size: 0.6rem;
+    }
+
+    #submit.active,#previous.active,#next.active,
+    .accordion-body .btn-danger,#add_assesment_review,#remove_assesment_review{
+        font-size: 0.5rem;
+    }
+
+    #add_attendence{
+        font-size: 0.5rem;
+    }
+
+    .accordion-header .accordion-button{
+        padding:0.3rem;
+        font-size: 0.5rem;
+    }
+  }
